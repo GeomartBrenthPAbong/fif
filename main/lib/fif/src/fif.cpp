@@ -4,7 +4,8 @@
 namespace fif
 {
     void
-    FIF::hide (
+    FIF::hide
+    (
         std::string inputDataPath[],
         std::string inputDBPath,
         std::string outputDBPath,
@@ -15,7 +16,8 @@ namespace fif
     }
 
     void
-    FIF::hide (
+    FIF::hide
+    (
         std::string inputDataPath[],
         std::string inputDBPath[],
         std::string outputDBPath,
@@ -26,9 +28,11 @@ namespace fif
     }
 
     void
-    FIF::extract (
+    FIF::hide
+    (
+        std::string inputData,
         std::string inputDBPath,
-        std::string outputDataFolderPath,
+        std::string outputDBPath,
         std::string password
     )
     {
@@ -36,10 +40,34 @@ namespace fif
     }
 
     void
-    FIF::extract (
-        std::string inputDBPath[],
-        std::string outputDataFolderPath,
+    FIF::hide
+    (
+        std::string inputData[],
+        std::string inputDBPath,
+        std::string outputDBPath,
         std::string password
+    )
+    {
+        //
+    }
+
+    void
+    FIF::extract
+    (
+        std::string inputDBPath,
+        std::string password,
+        OutputParams &outputParams
+    )
+    {
+        //
+    }
+
+    void
+    FIF::extract
+    (
+        std::string inputDBPath[],
+        std::string password,
+        OutputParams &outputParams
     )
     {
         //

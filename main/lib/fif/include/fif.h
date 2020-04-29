@@ -1,7 +1,8 @@
 #ifndef FIF_H
 #define FIF_H
 
-#include<string>
+#include "output_params.h"
+#include <string>
 
 namespace fif
 {
@@ -10,7 +11,8 @@ namespace fif
         public:
             static
             void
-            hide (
+            hide
+            (
                 std::string inputDataPath[],
                 std::string inputDBPath,
                 std::string outputDBPath,
@@ -19,7 +21,8 @@ namespace fif
 
             static
             void
-            hide (
+            hide
+            (
                 std::string inputDataPath[],
                 std::string inputDBPath[],
                 std::string outputDBPath,
@@ -28,18 +31,40 @@ namespace fif
 
             static
             void
-            extract (
+            hide
+            (
+                std::string inputData,
                 std::string inputDBPath,
-                std::string outputDataFolderPath,
+                std::string outputDBPath,
                 std::string password
             );
 
             static
             void
-            extract (
-                std::string inputDBPath[],
-                std::string outputDataFolderPath,
+            hide
+            (
+                std::string inputData[],
+                std::string inputDBPath,
+                std::string outputDBPath,
                 std::string password
+            );
+
+            static
+            void
+            extract
+            (
+                std::string inputDBPath,
+                std::string password,
+                OutputParams &outputParams
+            );
+
+            static
+            void
+            extract
+            (
+                std::string inputDBPath[],
+                std::string password,
+                OutputParams &outputParams
             );
     };
 }
