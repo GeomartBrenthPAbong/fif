@@ -41,8 +41,6 @@ namespace fif
                 std::string outputDataFolderPath,
                 std::string password
             );
-
-            static void test();
     };
 }
 
