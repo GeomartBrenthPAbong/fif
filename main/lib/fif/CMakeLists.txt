@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.0)
 
 set(VERSION 1.0)
-set(PROJECT fifdriver)
+set(PROJECT fif)
 set(SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
 set(INC_DIR ${CMAKE_CURRENT_LIST_DIR}/include)
 set(LIB_DIR ${CMAKE_CURRENT_LIST_DIR}/lib)
 
 project(${PROJECT})
 
-add_executable(${PROJECT} "")
+add_library(${PROJECT} STATIC "")
 
 set_target_properties(${PROJECT} PROPERTIES SOURCE_DIR ${SRC_DIR} VERSION ${VERSION})
 
@@ -46,8 +46,13 @@ endfunction()
 target_sources_local(${PROJECT}
     PRIVATE
         ${SRC_DIR}/fif.cpp
+    PUBLIC
+        ${INC_DIR}/fif.h
 )
 
-add_subdirectory(lib/fif)
-target_include_directories(${PROJECT} PUBLIC ${LIB_DIR}/fif/include)
-target_link_libraries(${PROJECT} fif)
+target_link_libraries(${PROJECT} png)
+target_include_directories(${PROJECT} PUBLIC ${INC_DIR})
+
+install(TARGETS ${PROJECT}
+   ARCHIVE DESTINATION ${CMAKE_CURRENT_LIST_DIR}
+   PUBLIC_HEADER DESTINATION ${INC_DIR})
