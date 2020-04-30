@@ -15,19 +15,19 @@ inline
 void
 OutputParams::setOutput
 (
-    OutputType outputType,
+    DataType dataType,
     std::string curOutput
 )
 {
-    this->outputType = outputType;
+    this->dataType = dataType;
     this->curOutput = curOutput;
 }
 
 inline
-OutputType
-OutputParams::getOutputType()
+DataType
+OutputParams::getDataType()
 {
-    return this->outputType;
+    return this->dataType;
 }
 
 inline

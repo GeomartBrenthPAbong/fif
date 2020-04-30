@@ -2,7 +2,7 @@
 #define OUTPUT_PARAMS_H
 
 #include "config.h"
-#include "output_type.h"
+#include "data_type.h"
 #include <string>
 
 NAMESPACE_OPEN(fif)
@@ -18,12 +18,12 @@ class OutputParams
         void
         setOutput
         (
-            OutputType outputType,
+            DataType dataType,
             std::string curOutput
         );
 
-        OutputType
-        getOutputType();
+        DataType
+        getDataType();
 
         std::string
         getOutput();
@@ -34,7 +34,7 @@ class OutputParams
     private:
         std::string outputFolder;
         std::string curOutput;
-        OutputType outputType;
+        DataType dataType;
 };
 
 NAMESPACE_CLOSE
