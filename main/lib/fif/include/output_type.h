@@ -1,13 +1,16 @@
 #ifndef OUTPUT_TYPE_H
 #define OUTPUT_TYPE_H
 
-namespace fif
+#include "config.h"
+
+NAMESPACE_OPEN(fif)
+
+enum OutputType
 {
-    enum OutputType
-    {
-        FILE,
-        TEXT
-    };
-}
+    FILE,
+    TEXT
+};
+
+NAMESPACE_CLOSE
 
 #endif

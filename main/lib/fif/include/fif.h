@@ -1,72 +1,73 @@
 #ifndef FIF_H
 #define FIF_H
 
+#include "config.h"
 #include "output_params.h"
 #include <string>
 
-namespace fif
+NAMESPACE_OPEN(fif)
+
+class FIF
 {
-    class FIF
-    {
-        public:
-            static
-            void
-            hide
-            (
-                std::string inputDataPath[],
-                std::string inputDBPath,
-                std::string outputDBPath,
-                std::string password
-            );
+    public:
+        static
+        void
+        hide
+        (
+            std::string inputDataPath[],
+            std::string inputDBPath,
+            std::string outputDBPath,
+            std::string password
+        );
 
-            static
-            void
-            hide
-            (
-                std::string inputDataPath[],
-                std::string inputDBPath[],
-                std::string outputDBPath,
-                std::string password
-            );
+        static
+        void
+        hide
+        (
+            std::string inputDataPath[],
+            std::string inputDBPath[],
+            std::string outputDBPath,
+            std::string password
+        );
 
-            static
-            void
-            hide
-            (
-                std::string inputData,
-                std::string inputDBPath,
-                std::string outputDBPath,
-                std::string password
-            );
+        static
+        void
+        hide
+        (
+            std::string inputData,
+            std::string inputDBPath,
+            std::string outputDBPath,
+            std::string password
+        );
 
-            static
-            void
-            hide
-            (
-                std::string inputData[],
-                std::string inputDBPath,
-                std::string outputDBPath,
-                std::string password
-            );
+        static
+        void
+        hide
+        (
+            std::string inputData[],
+            std::string inputDBPath,
+            std::string outputDBPath,
+            std::string password
+        );
 
-            static
-            void
-            extract
-            (
-                std::string inputDBPath,
-                std::string password,
-                OutputParams &outputParams
-            );
+        static
+        void
+        extract
+        (
+            std::string inputDBPath,
+            std::string password,
+            OutputParams &outputParams
+        );
 
-            static
-            void
-            extract
-            (
-                std::string inputDBPath[],
-                std::string password,
-                OutputParams &outputParams
-            );
-    };
-}
+        static
+        void
+        extract
+        (
+            std::string inputDBPath[],
+            std::string password,
+            OutputParams &outputParams
+        );
+};
 
+NAMESPACE_CLOSE
 #endif
