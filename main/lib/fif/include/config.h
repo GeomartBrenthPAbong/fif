@@ -1,4 +1,4 @@
-#ifndef NAMESPACE_OPEN(x)
+#ifndef NAMESPACE_OPEN
 #define NAMESPACE_OPEN(x) namespace x {
 #endif
 

@@ -14,9 +14,9 @@ class FIF
         void
         hide
         (
-            std::string inputDataPath[],
-            std::string inputDBPath,
-            std::string outputDBPath,
+            std::string inputFilePath[],
+            std::string inputDBFilePath,
+            std::string outputDBFilePath,
             std::string password
         );
 
@@ -24,9 +24,9 @@ class FIF
         void
         hide
         (
-            std::string inputDataPath[],
-            std::string inputDBPath[],
-            std::string outputDBPath,
+            std::string inputFilePath[],
+            std::string inputDBFilePath[],
+            std::string outputDBFilePath,
             std::string password
         );
 
@@ -35,18 +35,8 @@ class FIF
         hide
         (
             std::string inputData,
-            std::string inputDBPath,
-            std::string outputDBPath,
-            std::string password
-        );
-
-        static
-        void
-        hide
-        (
-            std::string inputData[],
-            std::string inputDBPath,
-            std::string outputDBPath,
+            std::string inputDBFilePath,
+            std::string outputDBFilePath,
             std::string password
         );
 
@@ -54,7 +44,7 @@ class FIF
         void
         extract
         (
-            std::string inputDBPath,
+            std::string inputDBFilePath,
             std::string password,
             OutputParams &outputParams
         );
@@ -63,11 +53,12 @@ class FIF
         void
         extract
         (
-            std::string inputDBPath[],
+            std::string inputDBFilePath[],
             std::string password,
             OutputParams &outputParams
         );
 };
 
 NAMESPACE_CLOSE
+
 #endif

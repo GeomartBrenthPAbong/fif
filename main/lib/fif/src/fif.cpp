@@ -6,9 +6,9 @@ NAMESPACE_OPEN(fif)
 void
 FIF::hide
 (
-    std::string inputDataPath[],
-    std::string inputDBPath,
-    std::string outputDBPath,
+    std::string inputFilePath[],
+    std::string inputDBFilePath,
+    std::string outputDBFilePath,
     std::string password
 )
 {
@@ -18,9 +18,9 @@ FIF::hide
 void
 FIF::hide
 (
-    std::string inputDataPath[],
-    std::string inputDBPath[],
-    std::string outputDBPath,
+    std::string inputFilePath[],
+    std::string inputDBFilePath[],
+    std::string outputDBFilePath,
     std::string password
 )
 {
@@ -31,20 +31,8 @@ void
 FIF::hide
 (
     std::string inputData,
-    std::string inputDBPath,
-    std::string outputDBPath,
-    std::string password
-)
-{
-    //
-}
-
-void
-FIF::hide
-(
-    std::string inputData[],
-    std::string inputDBPath,
-    std::string outputDBPath,
+    std::string inputDBFilePath,
+    std::string outputDBFilePath,
     std::string password
 )
 {
@@ -54,7 +42,7 @@ FIF::hide
 void
 FIF::extract
 (
-    std::string inputDBPath,
+    std::string inputDBFilePath,
     std::string password,
     OutputParams &outputParams
 )
@@ -65,7 +53,7 @@ FIF::extract
 void
 FIF::extract
 (
-    std::string inputDBPath[],
+    std::string inputDBFilePath[],
     std::string password,
     OutputParams &outputParams
 )
